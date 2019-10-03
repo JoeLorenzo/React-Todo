@@ -1,6 +1,6 @@
-import React from 'react';
-import data from './data';
-
+import React from "react";
+import data from "./data";
+import { Todo, TodoForm, TodoList } from "./components/TodoComponents"
 
 
 
@@ -15,10 +15,38 @@ class App extends React.Component {
     }
   }
 
+  toggleTodo = (event, todoId) => {
+    event.preventDefault()
+      this.setState({
+        // loops over each item in the array
+        tasks: this.state.tasks.map(task => {
+          if (task.id === todoId){
+            return {...task, completed: !task.completed }
+          }
+          else {
+            return task
+          }
+        })
+      })
+  }
+
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className="App">
+        <div className="header">
+          <h2>Your Todo List!</h2>
+           <TodoForm />
+        </div>
+
+        <div className="todo-list">
+          {this.state.tasks.map(task =>
+            <Todo
+              key={task.id}
+              todo={task}
+              onClick={(e) => this.toggleTodo(e, task.id)}
+            />
+          )}
+        </div>
       </div>
     );
   }

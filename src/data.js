@@ -1,31 +1,31 @@
 export default [
   {
-    task: 'Organize Garage',
+    taskItem: 'Organize Garage',
     id: 1528817077286,
     completed: false
   },
   {
-    task: 'Bake Cookies',
+    taskItem: 'Bake Cookies',
     id: 1528817084358,
     completed: false
   },
   {
-    task: 'Mop the kitchen',
+    taskItem: 'Mop the kitchen',
     id: 1,
     completed: false
   },
   {
-    task: 'Meal prep for the week',
+    taskItem: 'Meal prep for the week',
     id: 2,
     completed: false
   },
   {
-    task: 'Buy groceries',
+    taskItem: 'Buy groceries',
     id: 3,
     completed: false
   },
   {
-    task: 'Take out the trash',
+    taskItem: 'Take out the trash',
     id: 4,
     completed: false
   }
